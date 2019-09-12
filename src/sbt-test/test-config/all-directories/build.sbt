@@ -1,11 +1,11 @@
 version := "0.1"
  
-scalaVersion := "2.10.0"
+scalaVersion := "2.12.8"
  
 val containsMessage = taskKey[Boolean]("contains message")
 
 containsMessage := {
-    val expected = Seq("hello-2.10.scala", "hello-java.scala", "hello-scala.scala")
+    val expected = Seq("hello-2.12.scala", "hello-java.scala", "hello-scala.scala")
 
     val filename = "target/scalastyle-test-result.xml"
     val lines = sbt.IO.readLines(file(filename))
